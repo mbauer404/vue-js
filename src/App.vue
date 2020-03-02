@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-      <div id="iconsDiv">
-        <img id="sentryIcon" alt="Sentry logo" src="./assets/sentry-logo.png" />
-        <p class="plus">+</p>
-        <img class="icon" alt="Vue logo" src="./assets/logo.png" />
-      </div>
-
-      <p id="greeting">{{greetingTxt}}</p>
-      <div id="email-div">
-        <input id="emailInput" v-model="userEmail" placeholder="Enter email..." type="email" />
-        <button class="event-button" v-on:click="submitEmail">Submit</button>
-      </div>
-      <div id="event-list">
-        <EventButton title="Type Error" :onClick="notAFunctionError" />
-        <EventButton title="URIError" :onClick="uriError" />
-        <EventButton title="SyntaxError" :onClick="syntaxError" />
-        <EventButton title="RangeError" :onClick="rangeError" />
-      </div>
+    <div id="iconsDiv">
+      <img id="sentryIcon" alt="Sentry logo" src="./assets/sentry-logo.png" />
+      <p class="plus">+</p>
+      <img class="icon" alt="Vue logo" src="./assets/logo.png" />
     </div>
+
+    <p id="greeting">{{greetingTxt}}</p>
+    <div id="email-div">
+      <input id="emailInput" v-model="userEmail" placeholder="Enter email..." type="email" />
+      <button class="event-button" v-on:click="submitEmail">Submit</button>
+    </div>
+    <div id="event-list">
+      <EventButton title="Type Error" :onClick="notAFunctionError" />
+      <EventButton title="URIError" :onClick="uriError" />
+      <EventButton title="SyntaxError" :onClick="syntaxError" />
+      <EventButton title="RangeError" :onClick="rangeError" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -29,7 +29,7 @@ import * as Integrations from "@sentry/integrations";
 const HELLO = "Hello";
 
 Sentry.init({
-  dsn: "https://bec2c6cf33f54632b7eb4667960233ed@sentry.io/1496554",
+  dsn: "https://2112405e87fe4868882ebaa9c84fdd5f@sentry.io/2926558",
   release: process.env.VUE_APP_RELEASE,
   environment: "prod",
   integrations: [new Integrations.Vue({ Vue, attachProps: true })]
@@ -73,7 +73,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
